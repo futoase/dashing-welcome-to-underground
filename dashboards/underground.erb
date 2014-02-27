@@ -1,0 +1,28 @@
+<% content_for :title do %>Welcome to underground...<% end %>
+<div class="gridster">
+
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="welcome-to-underground" data-view="Text" data-title="かっこいい" data-text="おれの・・・右腕がうずきやがる・・・" data-moreinfo="(^_-)-☆"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="genki-meter" data-view="Meter" data-title="元気メーター" data-moreinfo="name is genki-meter"data-min="0" data-max="1000000"></div>
+    </li>
+
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="genjitsu-meter" data-view="Meter" data-title="現実メーター" data-moreinfo="name is genjitsu-meter"data-min="0" data-max="10000"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="genjitsu-board" data-view="Text" data-title="現実的な文章" data-text="何かテキストデータくださいな" data-moreinfo="・・・"></div>
+    </li>
+
+  </ul>
+  <center>
+    <div style="font-size: 12px">Try this: curl -d '{ "auth_token": "welcome-to-underground", "value": "100" }' \http://<%=request.host%>:<%=request.port%>/widgets/genjitsu-meter
+    </div>
+    <div style="font-size: 12px">Try this: curl -d '{ "auth_token": "welcome-to-underground", "text": "インターネッツ" }' \http://<%=request.host%>:<%=request.port%>/widgets/genjitsu-board
+    </div>
+  </center>
+</div>
